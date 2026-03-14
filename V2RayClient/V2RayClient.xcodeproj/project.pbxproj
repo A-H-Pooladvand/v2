@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83CBE8540000000000000200 /* V2RayClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE8540000000000000100 /* V2RayClientApp.swift */; };
+		83CBE8540000000000000201 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE8540000000000000101 /* MainView.swift */; };
+		83CBE8540000000000000202 /* ConfigListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE8540000000000000102 /* ConfigListView.swift */; };
+		83CBE8540000000000000203 /* ConfigDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE8540000000000000103 /* ConfigDetailView.swift */; };
+		83CBE8540000000000000204 /* AddConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE8540000000000000104 /* AddConfigView.swift */; };
+		83CBE8540000000000000205 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE8540000000000000105 /* QRScannerView.swift */; };
+		83CBE8540000000000000206 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE8540000000000000106 /* SettingsView.swift */; };
+		83CBE8540000000000000207 /* V2RayConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE8540000000000000107 /* V2RayConfig.swift */; };
+		83CBE8540000000000000208 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE8540000000000000108 /* AppSettings.swift */; };
+		83CBE8540000000000000209 /* ConfigParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE8540000000000000109 /* ConfigParser.swift */; };
+		83CBE854000000000000020A /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE854000000000000010A /* VPNManager.swift */; };
+		83CBE854000000000000020B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE854000000000000010B /* StorageService.swift */; };
+		83CBE854000000000000020C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CBE854000000000000010C /* Assets.xcassets */; };
+		83CBE854000000000000020D /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CBE854000000000000010D /* NetworkExtension.framework */; };
+		83CBE854000000000000020E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CBE854000000000000010E /* AVFoundation.framework */; };
+		83CBE8540000000000000521 /* ConfigParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBE8540000000000000520 /* ConfigParserTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83CBE8540000000000000012 /* V2RayClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2RayClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CBE8540000000000000100 /* V2RayClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2RayClientApp.swift; sourceTree = "<group>"; };
+		83CBE8540000000000000101 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		83CBE8540000000000000102 /* ConfigListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigListView.swift; sourceTree = "<group>"; };
+		83CBE8540000000000000103 /* ConfigDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigDetailView.swift; sourceTree = "<group>"; };
+		83CBE8540000000000000104 /* AddConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfigView.swift; sourceTree = "<group>"; };
+		83CBE8540000000000000105 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		83CBE8540000000000000106 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		83CBE8540000000000000107 /* V2RayConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2RayConfig.swift; sourceTree = "<group>"; };
+		83CBE8540000000000000108 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		83CBE8540000000000000109 /* ConfigParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigParser.swift; sourceTree = "<group>"; };
+		83CBE854000000000000010A /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
+		83CBE854000000000000010B /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		83CBE854000000000000010C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83CBE854000000000000010D /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		83CBE854000000000000010E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		83CBE854000000000000010F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83CBE8540000000000000110 /* V2RayClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = V2RayClient.entitlements; sourceTree = "<group>"; };
+		83CBE8540000000000000501 /* V2RayClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2RayClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CBE8540000000000000520 /* ConfigParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigParserTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83CBE8540000000000000022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CBE854000000000000020D /* NetworkExtension.framework in Frameworks */,
+				83CBE854000000000000020E /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83CBE8540000000000000001 /* V2RayClient */ = {
+			isa = PBXGroup;
+			children = (
+				83CBE8540000000000000003 /* V2RayClient */,
+				83CBE8540000000000000550 /* V2RayClientTests */,
+				83CBE8540000000000000002 /* Products */,
+				83CBE8540000000000000009 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		83CBE8540000000000000002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83CBE8540000000000000012 /* V2RayClient.app */,
+				83CBE8540000000000000501 /* V2RayClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83CBE8540000000000000003 /* V2RayClient */ = {
+			isa = PBXGroup;
+			children = (
+				83CBE8540000000000000100 /* V2RayClientApp.swift */,
+				83CBE8540000000000000004 /* Models */,
+				83CBE8540000000000000005 /* Views */,
+				83CBE8540000000000000006 /* Services */,
+				83CBE854000000000000010C /* Assets.xcassets */,
+				83CBE854000000000000010F /* Info.plist */,
+				83CBE8540000000000000110 /* V2RayClient.entitlements */,
+			);
+			path = V2RayClient;
+			sourceTree = "<group>";
+		};
+		83CBE8540000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83CBE8540000000000000107 /* V2RayConfig.swift */,
+				83CBE8540000000000000108 /* AppSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83CBE8540000000000000005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83CBE8540000000000000101 /* MainView.swift */,
+				83CBE8540000000000000102 /* ConfigListView.swift */,
+				83CBE8540000000000000103 /* ConfigDetailView.swift */,
+				83CBE8540000000000000104 /* AddConfigView.swift */,
+				83CBE8540000000000000105 /* QRScannerView.swift */,
+				83CBE8540000000000000106 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83CBE8540000000000000006 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				83CBE8540000000000000109 /* ConfigParser.swift */,
+				83CBE854000000000000010A /* VPNManager.swift */,
+				83CBE854000000000000010B /* StorageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		83CBE8540000000000000009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83CBE854000000000000010D /* NetworkExtension.framework */,
+				83CBE854000000000000010E /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83CBE8540000000000000550 /* V2RayClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				83CBE8540000000000000520 /* ConfigParserTests.swift */,
+			);
+			path = V2RayClientTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83CBE8540000000000000011 /* V2RayClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CBE8540000000000000411 /* Build configuration list for PBXNativeTarget "V2RayClient" */;
+			buildPhases = (
+				83CBE8540000000000000020 /* Sources */,
+				83CBE8540000000000000021 /* Resources */,
+				83CBE8540000000000000022 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = V2RayClient;
+			productName = V2RayClient;
+			productReference = 83CBE8540000000000000012 /* V2RayClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83CBE8540000000000000500 /* V2RayClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CBE8540000000000000542 /* Build configuration list for PBXNativeTarget "V2RayClientTests" */;
+			buildPhases = (
+				83CBE8540000000000000510 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83CBE8540000000000000531 /* PBXTargetDependency */,
+			);
+			name = V2RayClientTests;
+			productName = V2RayClientTests;
+			productReference = 83CBE8540000000000000501 /* V2RayClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBE8540000000000000010 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					83CBE8540000000000000011 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					83CBE8540000000000000500 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 83CBE8540000000000000011;
+					};
+				};
+			};
+			buildConfigurationList = 83CBE8540000000000000410 /* Build configuration list for PBXProject "V2RayClient" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBE8540000000000000001;
+			productRefGroup = 83CBE8540000000000000002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83CBE8540000000000000011 /* V2RayClient */,
+				83CBE8540000000000000500 /* V2RayClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83CBE8540000000000000021 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CBE854000000000000020C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83CBE8540000000000000020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CBE8540000000000000200 /* V2RayClientApp.swift in Sources */,
+				83CBE8540000000000000201 /* MainView.swift in Sources */,
+				83CBE8540000000000000202 /* ConfigListView.swift in Sources */,
+				83CBE8540000000000000203 /* ConfigDetailView.swift in Sources */,
+				83CBE8540000000000000204 /* AddConfigView.swift in Sources */,
+				83CBE8540000000000000205 /* QRScannerView.swift in Sources */,
+				83CBE8540000000000000206 /* SettingsView.swift in Sources */,
+				83CBE8540000000000000207 /* V2RayConfig.swift in Sources */,
+				83CBE8540000000000000208 /* AppSettings.swift in Sources */,
+				83CBE8540000000000000209 /* ConfigParser.swift in Sources */,
+				83CBE854000000000000020A /* VPNManager.swift in Sources */,
+				83CBE854000000000000020B /* StorageService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CBE8540000000000000510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CBE8540000000000000521 /* ConfigParserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83CBE8540000000000000531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83CBE8540000000000000011 /* V2RayClient */;
+			targetProxy = 83CBE8540000000000000530 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXContainerItemProxy section */
+		83CBE8540000000000000530 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBE8540000000000000010 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CBE8540000000000000011;
+			remoteInfo = V2RayClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin XCBuildConfiguration section */
+		83CBE8540000000000000300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLE = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83CBE8540000000000000301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLE = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83CBE8540000000000000302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = V2RayClient/V2RayClient.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = V2RayClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.v2rayclient.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83CBE8540000000000000303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = V2RayClient/V2RayClient.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = V2RayClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.v2rayclient.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		83CBE8540000000000000540 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.v2rayclient.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2RayClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/V2RayClient";
+			};
+			name = Debug;
+		};
+		83CBE8540000000000000541 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.v2rayclient.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2RayClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/V2RayClient";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83CBE8540000000000000410 /* Build configuration list for PBXProject "V2RayClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBE8540000000000000300 /* Debug */,
+				83CBE8540000000000000301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBE8540000000000000411 /* Build configuration list for PBXNativeTarget "V2RayClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBE8540000000000000302 /* Debug */,
+				83CBE8540000000000000303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBE8540000000000000542 /* Build configuration list for PBXNativeTarget "V2RayClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBE8540000000000000540 /* Debug */,
+				83CBE8540000000000000541 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBE8540000000000000010 /* Project object */;
+}
