@@ -10,9 +10,13 @@ A native iOS application for connecting to v2ray proxy configurations, built wit
 - [Screenshots](#screenshots)
 - [Requirements](#requirements)
 - [Installation](#installation)
-  - [Option A: Build from Source with Xcode](#option-a-build-from-source-with-xcode)
-  - [Option B: TestFlight / Ad Hoc Distribution](#option-b-testflight--ad-hoc-distribution)
-  - [Option C: Sideloading with AltStore](#option-c-sideloading-with-altstore)
+  - [Option A: Download IPA from GitHub Releases](#option-a-download-ipa-from-github-releases)
+  - [Option B: Build from Source with Xcode](#option-b-build-from-source-with-xcode)
+  - [Option C: TestFlight / Ad Hoc Distribution](#option-c-testflight--ad-hoc-distribution)
+  - [Option D: Sideloading with AltStore](#option-d-sideloading-with-altstore)
+- [Automated Builds (GitHub Actions)](#automated-builds-github-actions)
+  - [How It Works](#how-it-works)
+  - [Setting Up Signed Builds](#setting-up-signed-builds)
 - [Project Structure](#project-structure)
 - [Configuration Import Methods](#configuration-import-methods)
   - [1. Paste URI from Clipboard](#1-paste-uri-from-clipboard)
@@ -85,7 +89,27 @@ A native iOS application for connecting to v2ray proxy configurations, built wit
 
 ## Installation
 
-### Option A: Build from Source with Xcode
+### Option A: Download IPA from GitHub Releases
+
+The easiest way to install V2Ray Client — no Xcode required.
+
+1. Go to the **[Releases](../../releases)** page of this repository.
+2. Download the latest `V2RayClient.ipa` file.
+3. Install it on your iPhone using one of the tools below:
+
+| Tool | Platform | Notes |
+|------|----------|-------|
+| [AltStore](https://altstore.io/) | Mac / Windows | Free, renews every 7 days (free) or 1 year (paid) |
+| [Sideloadly](https://sideloadly.io/) | Mac / Windows | Free, easy drag-and-drop install |
+| [3uTools](http://www.3u.com/) | Windows | Free, includes device management |
+
+> **After installation:** go to **Settings → General → VPN & Device Management** and trust the developer certificate.
+>
+> **VPN note:** The NetworkExtension / VPN feature requires re-signing with a paid Apple Developer certificate that includes the NetworkExtension entitlement. All other features (config import, QR scanner, settings) work without it.
+
+---
+
+### Option B: Build from Source with Xcode
 
 This is the recommended method for developers.
 
@@ -120,7 +144,7 @@ Or double-click `V2RayClient.xcodeproj` in Finder.
 
 ---
 
-### Option B: TestFlight / Ad Hoc Distribution
+### Option C: TestFlight / Ad Hoc Distribution
 
 To distribute the app for testing:
 
@@ -133,7 +157,7 @@ For TestFlight, testers install the **TestFlight** app from the App Store and ac
 
 ---
 
-### Option C: Sideloading with AltStore
+### Option D: Sideloading with AltStore
 
 If you don't have a paid developer account, you can sideload with [AltStore](https://altstore.io):
 
@@ -142,6 +166,50 @@ If you don't have a paid developer account, you can sideload with [AltStore](htt
 3. Open **AltStore** on your iPhone and sideload the exported `.ipa`.
 
 > **Limitation:** Sideloaded apps expire after 7 days (free account) or 1 year (paid account). The VPN entitlement may not work without a proper developer account.
+
+---
+
+## Automated Builds (GitHub Actions)
+
+This repository includes a GitHub Actions workflow (`.github/workflows/ios-build-release.yml`) that automatically builds the app and publishes an IPA to GitHub Releases.
+
+### How It Works
+
+The workflow runs when you **push a version tag** (e.g. `v1.0.0`) or trigger it manually from the **Actions** tab:
+
+```bash
+# Tag and push to trigger a release build
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+The workflow will:
+1. Build `V2RayClient` using `xcodebuild archive` on a macOS runner.
+2. Export a signed IPA (if signing secrets are configured) or an unsigned IPA (for sideloading).
+3. Create a GitHub Release with the IPA attached and installation instructions.
+
+### Setting Up Signed Builds
+
+For a signed IPA (required for full VPN functionality), add the following **GitHub Secrets** to your repository under **Settings → Secrets and variables → Actions**:
+
+| Secret | Description |
+|--------|-------------|
+| `BUILD_CERTIFICATE_BASE64` | Base64-encoded `.p12` distribution/development certificate |
+| `P12_PASSWORD` | Password for the `.p12` file |
+| `BUILD_PROVISION_PROFILE_BASE64` | Base64-encoded `.mobileprovision` provisioning profile |
+| `KEYCHAIN_PASSWORD` | Any password used to create the temporary keychain |
+
+**Export your certificate as Base64:**
+```bash
+base64 -i Certificates.p12 | pbcopy   # copies to clipboard on macOS
+```
+
+**Export your provisioning profile as Base64:**
+```bash
+base64 -i YourApp.mobileprovision | pbcopy
+```
+
+> If no signing secrets are set, the workflow still runs and produces an unsigned IPA that can be sideloaded with AltStore or Sideloadly.
 
 ---
 
